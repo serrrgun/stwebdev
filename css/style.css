@@ -1,17 +1,17 @@
 .chrome {
-  background-image: url(../img/sprite-04678098969858022.png);
+  background-image: url(../img/sprite-09714746227821376.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-04678098969858022.png);
+  background-image: url(../img/sprite-09714746227821376.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-04678098969858022.png);
+  background-image: url(../img/sprite-09714746227821376.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -86,5 +86,17 @@ button svg {
 img {
   max-width: 100%;
   height: auto; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  height: 100vh;
+  width: 15.62vw;
+  background-color: #242b2e;
+  color: #6b7872;
+  -webkit-box-shadow: 8px 0px 14px 0px #848484;
+          box-shadow: 8px 0px 14px 0px #848484; }
 
 /*# sourceMappingURL=style.css.map */
