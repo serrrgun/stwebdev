@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока header-social, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header-social {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-right: 1.25vmax;
+  padding-top: 1.25vmax;
+  border-top: 1px solid #1e282b;
+
+  &__link {
+    display: block;
+    margin-left: 0.52vmax;
+    transition: .5s ease;
+
+    &:hover,
+    &:focus {
+      transform: scale(0.9);
+    }
+  }
+
+  &__icon {
+    width: 1.5vmax;
+    height: 1.5vmax;
+  }
+
+  &__copyright {
+    width: 100%;
+    margin: 0;
+    padding-right: 1.25vmax;
+    padding-top: 1.25vmax;
+    text-align: right;
+    font-size: 0.62vmax;
+    color: #6b7072;
+  }
+}
