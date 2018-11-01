@@ -4,7 +4,15 @@
 
 .main-nav {
 
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
 
+  &--open {
+    @media screen and (max-width: $screen-md) {
+      display: block;
+    }
+  }
 
   &__list {
     padding: 0;
@@ -16,6 +24,10 @@
     height: 3.22vmax;
     background: linear-gradient(to bottom, #333b3f 0%,#2e363a 100%);
     border-bottom: 1px solid #293034;
+
+    @media screen and (max-width: $screen-md) {
+      height: 6vmax;
+    }
 
     &:hover,
     &:focus {
@@ -37,10 +49,31 @@
     color: #fff;
     font-size: 0.93vmax;
     line-height: 1.66vmax;
+
+    @media screen and (max-width: $screen-md) {
+      justify-content: center;
+      font-size: 2.5vmax;
+    }
   }
 
   &__item--active {
     background: linear-gradient(to bottom, #18a3a1 0%,#31bcba 100%);
+  }
+
+  &__btn {
+    display: none;
+
+    @media screen and (max-width: $screen-md) {
+      display: block;
+      font-size: 3vmax;
+      color: #fff;
+      padding: 3vw;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      background-color: #293034;
+    }
   }
 
 }

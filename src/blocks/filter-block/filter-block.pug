@@ -1,0 +1,9 @@
+mixin filter-block()
+  section.filter-block
+    .filter-block__btn Filter
+      svg(width="50", height="50").filter-block__icon
+        use(xlink:href="img/sprite-svg.svg#filter-icon")
+    -var selected = 'All Works';
+    +filter-list(selected)
+
+

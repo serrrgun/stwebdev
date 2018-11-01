@@ -16,3 +16,22 @@ $(document).ready(function(){
 // ready(function(){
 //   // code
 // });
+
+(function () {
+
+  var filterBtn = document.querySelector('.filter-block__btn');
+  var filterTab = document.querySelector('.filter-list');
+
+  filterBtn.addEventListener('click', function() {
+    filterTab.classList.toggle('filter-list--active');
+  });
+})();
+
+(function () {
+  var menuBtn = document.querySelector('.main-nav__btn');
+  var menu = document.querySelector('.main-nav');
+
+  menuBtn.addEventListener('click', function () {
+    menu.classList.toggle('main-nav--open');
+  });
+})();

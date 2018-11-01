@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока filter-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter-block {
+
+  position: relative;
+
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
+
+   &__btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.25vmax;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #1ab5b3;
+    fill: #1ab5b3;
+    font-size: 0.98vmax;
+    transition: .5s;
+
+    &:hover,
+    &:focus {
+      color: #1e5352;
+      fill: #1e5352;
+    }
+  }
+
+  &__icon {
+    width: 0.9vmax;
+    height: 0.9vmax;
+    margin-left: 0.62vmax;
+  }
+
+}

@@ -1,0 +1,16 @@
+mixin filter-list(selected)
+  -
+    var menu = {
+      'All Works': '#',
+      'web design': '#',
+      'illustrator': '#',
+      'photography': '#',
+      'wallpapers': '#',
+      'brochures': '#'
+    };
+
+  ul.filter-list
+    each val, key in menu
+      li(class= selected.toLowerCase() === key.toLowerCase() ? 'filter-list__item  filter-list__item--active' : 'filter-list__item')
+        a(href=val, title=key)=key
+

@@ -11,8 +11,16 @@
   min-height: 11vh;
   background-color: #fff;
 
+  @media screen and (max-width: $screen-md) {
+    height: 20vh;
+  }
+
   &__svg {
     width: 7vw;
+
+    @media screen and (max-width: $screen-md) {
+      width: 35vw;
+    }
   }
 
   &__svg fill {

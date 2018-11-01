@@ -12,9 +12,15 @@
   flex-direction: column;
   height: 100vh;
   width: 15.62vw;
-  background-color: #242b2e; 
+  background-color: #242b2e;
   color: #6b7872;
   box-shadow: 8px 0px 14px 0px rgba(70,70,70,0.55);
+
+  @media screen and (max-width: $screen-md) {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
 }
 
 

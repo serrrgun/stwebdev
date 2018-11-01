@@ -7,5 +7,8 @@
   width: 100%;
   min-height: 100vh;
   padding-left: 15.62vw;
-  
+
+  @media screen and (max-width: $screen-md) {
+    padding: 1.25vw;
+  }
 }
