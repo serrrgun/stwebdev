@@ -667,6 +667,7 @@ img {
     padding: 1.25vmax;
     background-color: transparent;
     border: none;
+    border-top: 1px solid #1e282b;
     cursor: pointer;
     color: #1ab5b3;
     fill: #1ab5b3;
@@ -682,14 +683,9 @@ img {
     margin-left: 0.62vmax; }
 
 .filter-list {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -699,20 +695,18 @@ img {
           align-items: flex-end;
   margin: 0;
   padding: 0;
-  padding-bottom: 1.25vmax;
-  padding-top: 1.25vmax;
   list-style: none;
   background-color: #242b2e;
+  -webkit-transition: padding-bottom .5s, padding-top .5s, height 1s;
+  transition: padding-bottom .5s, padding-top .5s, height 1s;
   opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s; }
+  height: 0; }
   .filter-list--active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translateX(99%);
-            transform: translateX(99%);
-    opacity: 1; }
+    padding-bottom: 1.25vmax;
+    padding-top: 1.25vmax;
+    height: auto;
+    opacity: 1;
+    border-top: 1px solid #1e282b; }
   .filter-list__item {
     width: 100%;
     height: 100%;
@@ -731,6 +725,25 @@ img {
       color: #fff; }
   .filter-list__item--active a {
     color: #fff; }
+
+.page-error {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 15.62vw; }
+  .page-error__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10%; }
+  .page-error__icon {
+    width: 60vmax;
+    height: 60vmax; }
   @media screen and (max-width: 992px) {
   .main-nav {
     display: none; }
@@ -771,7 +784,21 @@ img {
         width: 100%;
         height: 70vw;
         margin-bottom: 1.25vmax; }
-    .filter-block {
-      display: none; } }
+      .filter-block__btn {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 2vmax;
+        font-size: 3vmax; }
+      .filter-block__icon {
+        width: 2.5vmax;
+        height: 2.5vmax; }
+      .filter-list__item {
+        text-align: center; }
+      .filter-list__item a {
+        font-size: 2.5vmax;
+        padding: 1vmax 1.25vmax; }
+    .page-error {
+      padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */
