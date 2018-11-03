@@ -540,10 +540,20 @@ img {
     color: #6b7072; }
 
 @-webkit-keyframes radial-pulse {
-  0% { } }
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5); }
+  100% {
+    -webkit-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 15px rgba(0, 0, 0, 0); } }
 
 @keyframes radial-pulse {
-  0% { } }
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5); }
+  100% {
+    -webkit-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 15px rgba(0, 0, 0, 0); } }
 
 .content {
   width: 100%;
@@ -768,7 +778,24 @@ img {
   .page-error__icon {
     width: 60vmax;
     height: 60vmax; }
-  @media (min-width: 992px) and (max-width: 1200px) {
+
+@-webkit-keyframes arrow-up {
+  from {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px); }
+  to {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px); } }
+
+@keyframes arrow-up {
+  from {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px); }
+  to {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px); } }
+
+@media (min-width: 992px) and (max-width: 1200px) {
     .main-nav__item {
       height: 4.5vmax; }
     .main-nav__item a {
@@ -795,10 +822,12 @@ img {
         height: 2.5vmax; }
       .filter-list__item a {
         font-size: 1.5vmax; } }
-  @media (min-width: 1200px) {
+
+@media (min-width: 1200px) {
     .logo {
       min-height: 11vh; } }
-  @media screen and (max-width: 992px) {
+
+@media screen and (max-width: 992px) {
   .main-nav {
     display: none; }
   .main-nav--open {
@@ -835,7 +864,6 @@ img {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      overflow: hidden;
       padding-right: 0;
       padding-left: 0;
       border-bottom-left-radius: 50px;
@@ -858,12 +886,12 @@ img {
         transition: .3s;
         -webkit-transform-origin: bottom;
                 transform-origin: bottom;
-        -webkit-transform: translateY(100%);
-                transform: translateY(100%);
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
         opacity: 0; }
     .header-social__icons-active {
-      -webkit-transform: translateX(0%);
-              transform: translateX(0%);
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
       opacity: 1; }
       .header-social__btn {
         display: block;
@@ -871,16 +899,18 @@ img {
         background-color: #1e282b;
         border-radius: 50%;
         border-color: transparent;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         outline: none;
-        fill: #1ab5b3; }
+        fill: #1ab5b3;
+        -webkit-animation: radial-pulse 1s infinite;
+                animation: radial-pulse 1s infinite; }
         .header-social__btn:hover, .header-social__btn:focus {
           fill: #1e5352; }
       .header-social__link {
         position: relative;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         margin-left: 0;
         margin-bottom: 1vmax;
@@ -916,8 +946,29 @@ img {
         font-size: 2.5vmax;
         padding: 1vmax 1.25vmax; }
     .page-error {
-      padding: 0; } }
-  @media screen and (max-width: 1200px) {
+      padding: 0; }
+  .back-button {
+    position: fixed;
+    bottom: 3vw;
+    right: 3vw;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #1e282b;
+    -webkit-animation: radial-pulse 1s infinite;
+            animation: radial-pulse 1s infinite;
+    border-radius: 50%;
+    fill: #1ab5b3; }
+  .back-button__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
+    width: 3.5vmax;
+    height: 3.5vmax; } }
+
+@media screen and (max-width: 1200px) {
     .logo {
       min-height: 20vh; } }
 
