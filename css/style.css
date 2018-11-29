@@ -795,7 +795,41 @@ img {
     -webkit-transform: translateY(1px);
             transform: translateY(1px); } }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+.love-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-family: 'Sedgwick Ave', cursive;
+  color: blueviolet;
+  text-transform: uppercase;
+  text-align: center; }
+  .love-block__text {
+    margin: 10% auto;
+    text-align: center; }
+  .love-block__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto; }
+  .love-block h3 {
+    text-align: center; }
+  .love-block p {
+    text-align: center; }
+  @media (min-width: 992px) and (max-width: 1200px) {
     .main-nav__item {
       height: 4.5vmax; }
     .main-nav__item a {
@@ -822,12 +856,10 @@ img {
         height: 2.5vmax; }
       .filter-list__item a {
         font-size: 1.5vmax; } }
-
-@media (min-width: 1200px) {
+  @media (min-width: 1200px) {
     .logo {
       min-height: 11vh; } }
-
-@media screen and (max-width: 992px) {
+  @media screen and (max-width: 992px) {
   .main-nav {
     display: none; }
   .main-nav--open {
@@ -967,8 +999,7 @@ img {
             transform: translate(-50%, -40%);
     width: 3.5vmax;
     height: 3.5vmax; } }
-
-@media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     .logo {
       min-height: 20vh; } }
 
