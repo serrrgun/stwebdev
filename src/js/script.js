@@ -22,9 +22,12 @@ $(document).ready(function(){
   var filterBtn = document.querySelector('.filter-block__btn');
   var filterTab = document.querySelector('.filter-list');
 
-  filterBtn.addEventListener('click', function() {
-    filterTab.classList.toggle('filter-list--active');
-  });
+  if (filterBtn && filterTab) {
+
+    filterBtn.addEventListener('click', function() {
+      filterTab.classList.toggle('filter-list--active');
+    });
+}
 })();
 
 (function () {
@@ -34,4 +37,14 @@ $(document).ready(function(){
   menuBtn.addEventListener('click', function () {
     menu.classList.toggle('main-nav--open');
   });
+})();
+
+
+(function () {
+  var socialBtn = document.querySelector('.header-social__btn');
+  var socialBlock = document.querySelector('.header-social__wrapper');
+
+  socialBtn.addEventListener('click', function () {
+    socialBlock.classList.toggle('header-social__icons-active');
+  })
 })();

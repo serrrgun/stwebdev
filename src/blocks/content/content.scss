@@ -11,4 +11,8 @@
   @media screen and (max-width: $screen-md) {
     padding: 1.25vw;
   }
+
+  @media (min-width: $screen-md) and (max-width: $screen-lg) {
+    padding-left: 25vw;
+  }
 }

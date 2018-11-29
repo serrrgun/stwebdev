@@ -1,0 +1,6 @@
+mixin header-no-filter()
+  header.header
+    +logo()
+    -var selected = 'home';
+    +main-nav(selected)
+    +header-social()

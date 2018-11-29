@@ -7,7 +7,7 @@
   position: relative;
 
   @media screen and (max-width: $screen-md) {
-    display: none;
+    //display: none;
   }
 
    &__btn {
@@ -17,11 +17,22 @@
     padding: 1.25vmax;
     background-color: transparent;
     border: none;
+    border-top: 1px solid #1e282b;
     cursor: pointer;
     color: #1ab5b3;
     fill: #1ab5b3;
     font-size: 0.98vmax;
     transition: .5s;
+
+    @media screen and (max-width: $screen-md) {
+      justify-content: center;
+      padding: 2vmax;
+      font-size: 3vmax;
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      font-size: 1.8vmax;
+    }
 
     &:hover,
     &:focus {
@@ -34,6 +45,16 @@
     width: 0.9vmax;
     height: 0.9vmax;
     margin-left: 0.62vmax;
+
+    @media screen and (max-width: $screen-md) {
+      width: 2.5vmax;
+      height: 2.5vmax;
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      width: 2.5vmax;
+      height: 2.5vmax;
+    }
   }
 
 }

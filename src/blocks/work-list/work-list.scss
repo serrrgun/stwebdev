@@ -20,6 +20,11 @@
       height: 70vw;
       margin-bottom: 1.25vmax;
     }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      width: 50%;
+      height: 30vw;
+    }
   }
 
 

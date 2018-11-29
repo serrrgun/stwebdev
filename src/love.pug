@@ -3,17 +3,17 @@ extends templates/layout-home.pug
 block meta
   title Home
   meta(name='description', content='Home page!')
+  link(href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet")
 
 //- block append head
 //-   link(rel="stylesheet", href="some.css")
 //-   script(src='some.js')
 
 block header
-  +header()
+
 
 block content
-  +content()
-  +back-button()
+  +love-block()
 
 
 //- block append page-bottom

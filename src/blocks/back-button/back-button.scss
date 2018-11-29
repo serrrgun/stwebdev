@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока back-button, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.back-button {
+
+  @media screen and (max-width: $screen-md) {
+    position: fixed;
+    bottom: 3vw;
+    right: 3vw;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #1e282b;
+    animation: radial-pulse 1s infinite;
+    border-radius: 50%;
+    fill: #1ab5b3;
+  }
+
+  &__icon {
+    @media screen and (max-width: $screen-md) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      width: 3.5vmax;
+      height: 3.5vmax;
+    }
+  }
+
+}
+
+@keyframes arrow-up {
+  from {
+    transform: translateY(1px);
+  }
+
+  to {
+    transform: translateY(1px);
+  }
+}

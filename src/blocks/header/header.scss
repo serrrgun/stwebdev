@@ -21,6 +21,10 @@
     width: 100%;
     height: auto;
   }
+
+  @media (min-width: $screen-md) and (max-width: $screen-lg) {
+    width: 25vw;
+  }
 }
 
 

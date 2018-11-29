@@ -29,6 +29,10 @@
       height: 6vmax;
     }
 
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      height: 4.5vmax;
+    }
+
     &:hover,
     &:focus {
       background: linear-gradient(to bottom, #18a3a1 0%,#31bcba 100%);
@@ -53,6 +57,11 @@
     @media screen and (max-width: $screen-md) {
       justify-content: center;
       font-size: 2.5vmax;
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      font-size: 2vmax;
+      padding-right: 2.5vmax;
     }
   }
 

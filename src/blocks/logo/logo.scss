@@ -8,11 +8,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 11vh;
+  min-height: 11vmax;
   background-color: #fff;
 
-  @media screen and (max-width: $screen-md) {
-    height: 20vh;
+  @media screen and (max-width: $screen-lg) {
+    min-height: 20vh;
+  }
+
+  @media (min-width: $screen-lg) {
+    min-height: 11vh;
   }
 
   &__svg {
@@ -20,6 +24,10 @@
 
     @media screen and (max-width: $screen-md) {
       width: 35vw;
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      width: 17vw;
     }
   }
 

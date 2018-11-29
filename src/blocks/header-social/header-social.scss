@@ -3,22 +3,102 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header-social {
-
+  position: static;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  align-content: center;
   padding-right: 1.25vmax;
   padding-top: 1.25vmax;
   border-top: 1px solid #1e282b;
 
   @media screen and (max-width: $screen-md) {
+    position: fixed;
+    bottom: 3vw;
+    left: 3vw;
+    border: none;
+    flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @media screen and (max-width: $screen-md) {
+      flex-direction: column;
+      align-items: center;
+      width: 80px;
+      padding-top: 1.25vmax;
+      padding-bottom: 5.25vmax;
+      margin-bottom: -5.25vmax;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      transition: .3s;
+      transform-origin: bottom;
+      transform: scaleY(0);
+      opacity: 0;
+
+    }
+  }
+
+  &__icons-active {
+    @media screen and (max-width: $screen-md) {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+
     display: none;
+
+    @media screen and (max-width: $screen-md) {
+      display: block;
+      position: relative;
+      background-color: #1e282b;
+      border-radius: 50%;
+      border-color: transparent;
+      width: 70px;
+      height: 70px;
+      outline: none;
+      fill: #1ab5b3;
+      animation: radial-pulse 1s infinite;
+
+      &:hover,
+      &:focus {
+        fill: #1e5352;
+      }
+    }
+  }
+
+  &__btn-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    width: 4.5vmax;
+    height: 4.5vmax;
+
   }
 
   &__link {
     display: block;
     margin-left: 0.52vmax;
     transition: .5s ease;
+
+    @media screen and (max-width: $screen-md) {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-left: 0;
+      margin-bottom: 1vmax;
+      background-color: #1e282b;
+    }
 
     &:hover,
     &:focus {
@@ -29,6 +109,20 @@
   &__icon {
     width: 1.5vmax;
     height: 1.5vmax;
+
+    @media screen and (max-width: $screen-md) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4.5vmax;
+      height: 4.5vmax;
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      width: 3vmax;
+      height: 3vmax;
+    }
   }
 
   &__copyright {
@@ -43,5 +137,19 @@
     @media screen and (max-width: $screen-md) {
       display: none;
     }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      font-size: 1.62vmax;
+    }
+  }
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
   }
 }
