@@ -4,6 +4,8 @@
 
 .back-button {
 
+  display: none;
+
   @media screen and (max-width: $screen-md) {
     position: fixed;
     bottom: 3vw;
