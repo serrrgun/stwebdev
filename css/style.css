@@ -482,10 +482,19 @@ img {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  min-height: 11vmax;
-  background-color: #fff; }
+  min-height: 16.19vw;
+  background-color: #fff;
+  /*
+  @media screen and (max-width: $screen-lg) {
+    min-height: 20vh;
+  }
+
+  @media (min-width: $screen-lg) {
+    min-height: 11vh;
+  }
+*/ }
   .logo__svg {
-    width: 7vw; }
+    width: 70%; }
   .logo__svg fill {
     background-color: red; }
 
@@ -779,6 +788,9 @@ img {
     width: 60vmax;
     height: 60vmax; }
 
+.back-button {
+  display: none; }
+
 @-webkit-keyframes arrow-up {
   from {
     -webkit-transform: translateY(1px);
@@ -837,6 +849,8 @@ img {
       padding-right: 2.5vmax; }
     .header {
       width: 25vw; }
+    .logo {
+      height: 30vw; }
       .logo__svg {
         width: 17vw; }
       .header-social__icon {
@@ -856,9 +870,6 @@ img {
         height: 2.5vmax; }
       .filter-list__item a {
         font-size: 1.5vmax; } }
-  @media (min-width: 1200px) {
-    .logo {
-      min-height: 11vh; } }
   @media screen and (max-width: 992px) {
   .main-nav {
     display: none; }
@@ -885,8 +896,11 @@ img {
       position: relative;
       width: 100%;
       height: auto; }
+    .logo {
+      height: 70vw; }
       .logo__svg {
-        width: 35vw; }
+        width: 85%;
+        height: 50%; }
     .header-social {
       position: fixed;
       bottom: 3vw;
@@ -979,28 +993,25 @@ img {
         padding: 1vmax 1.25vmax; }
     .page-error {
       padding: 0; }
-  .back-button {
-    position: fixed;
-    bottom: 3vw;
-    right: 3vw;
-    display: block;
-    width: 70px;
-    height: 70px;
-    background-color: #1e282b;
-    -webkit-animation: radial-pulse 1s infinite;
-            animation: radial-pulse 1s infinite;
-    border-radius: 50%;
-    fill: #1ab5b3; }
-  .back-button__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
-    width: 3.5vmax;
-    height: 3.5vmax; } }
-  @media screen and (max-width: 1200px) {
-    .logo {
-      min-height: 20vh; } }
+    .back-button {
+      position: fixed;
+      bottom: 3vw;
+      right: 3vw;
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-color: #1e282b;
+      -webkit-animation: radial-pulse 1s infinite;
+              animation: radial-pulse 1s infinite;
+      border-radius: 50%;
+      fill: #1ab5b3; }
+    .back-button__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -40%);
+              transform: translate(-50%, -40%);
+      width: 3.5vmax;
+      height: 3.5vmax; } }
 
 /*# sourceMappingURL=style.css.map */
